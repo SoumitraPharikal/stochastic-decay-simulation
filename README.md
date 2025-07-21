@@ -4,7 +4,7 @@ This project simulates the radioactive decay process using discrete-time Monte C
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 stochastic-decay-simulation/
 │
