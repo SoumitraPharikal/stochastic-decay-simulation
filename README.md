@@ -1,12 +1,13 @@
 # Stochastic Simulation of Probabilistic Decay Pathways Using Discrete Monte Carlo Sampling
 
-This project simulates the radioactive decay process using discrete-time Monte Carlo techniques. It analyzes how statistical noise scales with population size by computing RMS deviations from the analytical decay law, and presents both absolute and normalized error trends over varying initial populations \( N_0 \in [10, 10^4] \).
+This project simulates the radioactive decay process using discrete-time Monte Carlo techniques. It analyzes how statistical noise scales with population size by computing RMS deviations from the analytical decay law, and presents both absolute and normalized error trends over varying initial populations  N_0 belongs to [10, 10^4] \).
 
 ---
 
 ## Repository Structure
 
-stochastic-decay-simulation/
+stochastic-decay-simulation
+
 │
 ├── code/
 │ ├── decay_sim.py # Core simulation logic (decay curves)
