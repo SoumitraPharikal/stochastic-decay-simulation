@@ -7,7 +7,7 @@ This project simulates the radioactive decay process using discrete-time Monte C
 ## Repository Structure
 
 stochastic-decay-simulation
-
+'''
 │
 ├── code/
 │ ├── decay_sim.py # Core simulation logic (decay curves)
@@ -22,7 +22,7 @@ stochastic-decay-simulation
 ├── main.tex # LaTeX Report (full analysis)
 ├── README.md # You're here.
 └── requirements.txt # All Python dependencies
-
+'''
 ---
 
 ##  Key Features
