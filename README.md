@@ -31,7 +31,7 @@ stochastic-decay-simulation
 
 - Simulates decay across multiple time steps and trials.
 - Computes RMS deviation between theoretical and Monte Carlo decay.
-- Analyzes absolute and normalized error scaling across \( N_0 \in [10, 10^4] \).
+- Analyzes absolute and normalized error scaling across  N_0 belongs to [10, 10^4] .
 - Fits power-law scaling using `scipy.optimize.curve_fit`.
 - Exports high-quality plots and GIF animation.
 - Full report available in LaTeX format.
@@ -44,10 +44,12 @@ stochastic-decay-simulation
 
 git clone https://github.com/SoumitraPharikal/stochastic-decay-simulation.git
 cd stochastic-decay-simulation
+
 2. Create a Virtual Environment (Recommended)
-python -m venv .venv
+```python -m venv .venv
 source .venv/bin/activate        # On Unix or macOS
 .venv\Scripts\activate           # On Windows
+```
 3. Install Dependencies
 pip install -r requirements.txt
 ### How to Run
@@ -61,14 +63,14 @@ All output files (plots and animations) are saved to the plots/ folder.
 
 ### Report
 The full technical report is written in LaTeX and available in the report Folder.
-
+```
 Contents include:
 Theoretical background and decay law derivation
 Stochastic modeling methodology
 Power-law fit and residual analysis
 Animation overview
 Reproducible Python code (included in appendix)
-
+```
 ### System Requirements
 Python ≥ 3.9
 
