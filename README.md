@@ -1,156 +1,87 @@
-\# ☢️ Stochastic Simulation of Probabilistic Decay Pathways Using Discrete Monte Carlo Sampling
+# Stochastic Simulation of Probabilistic Decay Pathways Using Discrete Monte Carlo Sampling
 
-
-
-This project simulates radioactive decay as a stochastic process using discrete-time Monte Carlo sampling. It models nuclear disintegration as a probabilistic event, where each nucleus has a fixed chance to decay during each time step. Repeating this across many nuclei and multiple runs allows us to observe how random microscopic behavior gives rise to deterministic macroscopic laws — like the exponential decay law.
-
-
+This project simulates the radioactive decay process using discrete-time Monte Carlo techniques. It analyzes how statistical noise scales with population size by computing RMS deviations from the analytical decay law, and presents both absolute and normalized error trends over varying initial populations \( N_0 \in [10, 10^4] \).
 
 ---
 
-
-
-\## 💡 Project Goals
-
-
-
-\- Simulate radioactive decay as a discrete-time random process
-
-\- Compare simulated decay with the analytical exponential decay curve
-
-\- Analyze fluctuations across ensemble simulations
-
-\- Study how fluctuations scale with initial population size (∼ 1/√N)
-
-\- Estimate decay constants and analyze confidence intervals
-
-\- Visualize decay curves and create animations
-
-
-
----
-
-
-
-\## 📁 Folder Structure
-
-
-
-```
+## 📂 Repository Structure
 
 stochastic-decay-simulation/
-
-├── code/         # Python simulation and analysis scripts
-
-├── data/         # Raw and processed simulation data (excluded from Git)
-
-├── plots/        # Static plots of decay curves and error analysis
-
-├── gifs/         # Animated simulations of decay processes
-
-├── report/       # LaTeX report documenting the project
-
-├── README.md     # Project description and instructions
-
-├── .gitignore    # Files to ignore in version control
-
-└── requirements.txt  # Python dependencies
-
-```
-
-
+│
+├── code/
+│ ├── decay_sim.py # Core simulation logic (decay curves)
+│ ├── analysis.py # RMS deviation analysis and log-log scaling
+│ └── animate_decay.py # Decay animation (GIF)
+│
+├── plots/
+│ ├── decay_simulation.gif # Animated decay process (theory vs MC)
+│ ├── rms_vs_N0_absolute.png # Absolute RMS vs N₀ (log-log plot)
+│ └── rms_vs_N0_normalized.png# Normalized RMS vs N₀ (log-log plot)
+│
+├── main.tex # LaTeX Report (full analysis)
+├── README.md # You're here.
+└── requirements.txt # All Python dependencies
 
 ---
 
+##  Key Features
 
+- Simulates decay across multiple time steps and trials.
+- Computes RMS deviation between theoretical and Monte Carlo decay.
+- Analyzes absolute and normalized error scaling across \( N_0 \in [10, 10^4] \).
+- Fits power-law scaling using `scipy.optimize.curve_fit`.
+- Exports high-quality plots and GIF animation.
+- Full report available in LaTeX format.
 
-\## 🚀 Getting Started
+---
 
+##  Installation
 
+### 1. Clone this Repository
 
-Once you clone this repository:
-
-
-
-```bash
-
-git clone https://github.com/yourusername/stochastic-decay-simulation.git
-
+git clone https://github.com/SoumitraPharikal/stochastic-decay-simulation.git
 cd stochastic-decay-simulation
-
+2. Create a Virtual Environment (Recommended)
+python -m venv .venv
+source .venv/bin/activate        # On Unix or macOS
+.venv\Scripts\activate           # On Windows
+3. Install Dependencies
 pip install -r requirements.txt
+🚀 How to Run
+Simulation + RMS Analysis
 
-```
+python code/animate_decay.py
+python code/analysis.py
+Animated Decay Process (GIF)
 
+All output files (plots and animations) are saved to the plots/ folder.
 
+📚 Report
+The full technical report is written in LaTeX and available in the report Folder.
 
-Then run the simulation scripts inside `code/` to begin exploring.
+Contents include:
+Theoretical background and decay law derivation
+Stochastic modeling methodology
+Power-law fit and residual analysis
+Animation overview
+Reproducible Python code (included in appendix)
 
+🖥 System Requirements
+Python ≥ 3.9
 
+RAM: ≥ 4 GB
 
----
+Disk: ~200 MB
 
-
-
-\## 🧪 Features (To Be Implemented)
-
-
-
-\- \[ ] Core simulation of discrete stochastic decay
-
-\- \[ ] Analytical comparison using exponential fit
-
-\- \[ ] Fluctuation vs. N₀ scaling plots
-
-\- \[ ] Estimation of λ and construction of confidence intervals
-
-\- \[ ] Animated GIFs showing real-time decay
-
-\- \[ ] Final LaTeX report with figures
-
+Recommended: Jupyter, VS Code, or LaTeX editor for report compilation
 
 
----
+Project completed as part of independent exploration of statistical modeling and computational physics.
 
 
-
-\## 🔧 Dependencies
-
-
-
-Python packages used:
-
-\- `numpy`
-
-\- `matplotlib`
-
-\- `scipy`
-
-\- `pillow` \*(for animations)\*
+✅ Acknowledgements
+Thanks to open-source libraries like NumPy, SciPy, and Matplotlib. Animation made possible using FuncAnimation and Pillow.
 
 
-
-Install them with:
-
-
-
-```bash
-
-pip install -r requirements.txt
-
-```
-
-
-
----
-
-
-
-\## 📜 License
-
-
-
-This project is open-source and available under the MIT License.
-
-
-
+📄 License
+This project is open-source under the MIT License.
