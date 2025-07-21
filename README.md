@@ -47,7 +47,7 @@ source .venv/bin/activate        # On Unix or macOS
 .venv\Scripts\activate           # On Windows
 3. Install Dependencies
 pip install -r requirements.txt
-🚀 How to Run
+### How to Run
 Simulation + RMS Analysis
 
 python code/animate_decay.py
@@ -56,7 +56,7 @@ Animated Decay Process (GIF)
 
 All output files (plots and animations) are saved to the plots/ folder.
 
-📚 Report
+### Report
 The full technical report is written in LaTeX and available in the report Folder.
 
 Contents include:
@@ -66,7 +66,7 @@ Power-law fit and residual analysis
 Animation overview
 Reproducible Python code (included in appendix)
 
-🖥 System Requirements
+### System Requirements
 Python ≥ 3.9
 
 RAM: ≥ 4 GB
@@ -79,9 +79,9 @@ Recommended: Jupyter, VS Code, or LaTeX editor for report compilation
 Project completed as part of independent exploration of statistical modeling and computational physics.
 
 
-✅ Acknowledgements
+### Acknowledgements
 Thanks to open-source libraries like NumPy, SciPy, and Matplotlib. Animation made possible using FuncAnimation and Pillow.
 
 
-📄 License
+### License
 This project is open-source under the MIT License.
